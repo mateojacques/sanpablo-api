@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_addresses",
+  "info": {
+    "displayName": "Address",
+    "description": "Dirección postal de usuario para envíos y facturación"
+  },
+  "attributes": {
+    "name": {"type": "string", "required": false, "description": "Etiqueta de la dirección (Casa, Trabajo, etc.)"},
+    "line1": {"type": "string", "required": true},
+    "line2": {"type": "string"},
+    "city": {"type": "string", "required": true},
+    "state": {"type": "string"},
+    "postalCode": {"type": "string", "required": true},
+    "country": {"type": "string", "required": true, "default": "AR"},
+    "notes": {"type": "text"},
+    "isDefaultShipping": {"type": "boolean", "default": false},
+    "isDefaultBilling": {"type": "boolean", "default": false}
+  }
+}
