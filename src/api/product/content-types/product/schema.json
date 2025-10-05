@@ -9,82 +9,75 @@
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "code": {
       "type": "string",
+      "maxLength": 50,
       "required": true,
-      "unique": true,
-      "maxLength": 50
+      "unique": true
     },
     "title": {
       "type": "text",
       "required": false
     },
-
     "price": {
       "type": "decimal",
       "required": false
     },
-
     "stock": {
       "type": "integer",
       "required": false,
       "default": 0
     },
-
     "familia": {
       "type": "string",
       "maxLength": 50
     },
-
     "nombreFamilia": {
       "type": "string",
       "maxLength": 100
     },
-
     "descripcion": {
       "type": "text"
     },
-
     "presentacion": {
       "type": "string",
       "maxLength": 10
     },
-
     "linea": {
       "type": "string",
       "maxLength": 50
     },
-
     "nombre": {
       "type": "string",
       "maxLength": 100
     },
-
     "costo": {
       "type": "decimal"
     },
-
     "precio1": {
       "type": "decimal"
     },
-
     "precio2": {
       "type": "decimal"
     },
-
     "fecha": {
       "type": "date"
     },
-
     "unidad": {
       "type": "string",
       "maxLength": 20
     },
-
     "importaExt": {
       "type": "boolean",
       "default": false
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "products"
     }
   }
 }
